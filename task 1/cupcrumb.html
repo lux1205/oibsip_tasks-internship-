@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CupAndCrumb</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #deb787;
+            text-align: center;
+            box-sizing: border-box;
+            overflow-x: hidden;
+            max-width: 100%;
+            background-image: url('bg2.jpg');
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+}
+header {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: #8B5A2B; 
+    width: 100%;
+    height: 60px;
+}
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin-left: auto; 
+    gap: 20px;
+    padding: 50px;
+}
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+        .hero {
+            position: relative;
+            text-align: center;
+        }
+
+        .hero img {
+            width: 100%;
+            max-height: 700px;
+            opacity: 0.9;
+            object-fit: cover;
+        }
+
+        .hero .glass-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.2);
+            padding: 25px;
+            border-radius: 15px;
+            
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 280px;
+        }
+
+        .hero h1 {
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .hero p {
+            color: white;
+            font-size: 16px;
+        }
+
+        .hero button {
+            padding: 10px 20px;
+            background: #8b5e3b;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: 0.3s ease-in-out;
+            border-radius: 5px;
+        }
+
+        .hero button:hover {
+            background: #6a3f20;
+            transform: scale(1.1);
+        }
+        .categories {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+
+        .category {
+            display: flex;
+            align-items: center;
+            background: #d4a373;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            color: white;
+            border:#8b5a2b solid;
+        }
+
+        .category img {
+            width: 30px;
+            margin-right: 5px;
+        }
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center; 
+    justify-content: center;
+}
+.card {
+    display: flex; 
+    align-items: center; 
+    background:  #f6ce97fd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 600px; 
+    margin: 20px auto;
+    border: #6a3f20 solid; 
+}
+.card img {
+    width: 250px; 
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px; 
+}
+.card-content {
+    text-align: left;
+}
+.card-content h2 {
+    font-size: 24px;
+    font-family:  sans-serif;
+    font-weight: bold;
+    color: #5e3b1e;
+    margin-bottom: 10px;
+}
+.card-content {
+    padding: 15px;
+}
+.card-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #5e3b1e;
+    margin-bottom: 8px;
+}
+.card-content h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #8b4513;
+    margin-bottom: 10px;
+}
+.card-content p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: #3e2723;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #d35400;
+}
+.card h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #5e3b1e;
+    margin-bottom: 15px;
+}
+.offer-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    background: #f6ce97fd;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width:600px; 
+    margin: 20px auto; 
+    margin-bottom: 0;
+    padding-bottom: 20px; 
+    border: #6a3f20 solid;
+}
+
+.offer-images {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.offer-images img {
+    width: 250px;
+    height: 300px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.offer-details {
+    margin-top: 15px;
+}
+
+.offer-details p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #3e2723;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #d35400;
+}
+
+.order-button {
+    background: #8b5a2b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.order-button:hover {
+    background: #5a3d1d;
+}
+        .btn {
+            display: inline-block;
+            background: #8b5a2b;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 14px;
+            margin-top: 10px;
+            position:center;
+        }
+
+        .btn:hover {
+            background: #5a3d1d;
+        }
+        .custom-footer {
+            background: #8B5A2B;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 14px;
+            position: relative;
+            width: 100%;
+            margin-top: 0px;
+            border:#f9bb74 
+        }
+        
+        .footer-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .footer-box {
+            background: #bd9270;
+            padding: 15px 10px;
+            border-radius: 10px;
+            border:#7c5c44 solid;
+        }
+        
+        .footer-box h3 {
+            font-size: 16px;
+            margin-bottom: 0px;
+        }
+        
+        .footer-box p, .footer-box a {
+            font-size: 14px;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .footer-box a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer-bottom {
+            margin-top: 15px;
+            font-size: 12px;
+            opacity: 0.7;
+        }
+.form-container {
+    background: #fff;
+    padding: 20px;
+    width: 300px;
+    border-radius: 8px;
+    text-align: left;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-container h2 {
+    margin-bottom: 10px;
+    text-align: center;
+    color: #8b5e3c;
+}
+
+label {
+    font-size: 14px;
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.book-btn {
+    background-color: #e0ac69;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.book-btn:hover {
+    background-color: #c4884b;
+}
+
+    </style>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <div class="logo">Cup and Crumb</div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Coffee</a></li>
+                <li><a href="#">Bakery</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <img src="c1.jpg" alt="Coffee Pouring">
+        <div class="glass-box">
+            <h1>Welcome!</h1>
+            <p>"Brewing a better day, one cup at a time!"</p>
+            <button>Order Now</button>
+        </div>
+    </section>
+
+    <section class="categories">
+        <div class="category"><img src="cold.jpg" alt="">Cold Coffee</div>  
+        <div class="category"><img src="hot.jpg" alt="">Hot Coffee</div>
+        <div class="category"><img src="coffeee candy.jpg" alt="">coffee candy</div> 
+        <div class="category"><img src="waffle.jpg" alt="">Waffles</div>
+    </section>
+    <div class="card">
+        <img src="c7.jpg" alt="Cappuccino">
+        <div class="card-content">
+            <h1>CAPPUCCINO</h1>
+            <p>Coffee 50%, Milk 50% <br> 250 ml</p>
+            <h2 class="price">Price: ₹100</h2>
+            <button class="order-button">Order Now</button>
+        </div>
+    </div>
+    <div class="card">
+        <img src="c6.jpg" alt="Coffee Break">
+        <div class="card-content">
+            <p>Click and order in your favourite spot</p>
+            <button class="order-button">Order Now</button>
+        
+        </div>
+    </div>
+    
+    <div class="offer-container">
+        <div class="offer-images">
+            <img src="c7.jpg" alt="Coffee">
+            <img src="waffles.jpg" alt="Waffle">
+        </div>
+        <div class="offer-details">
+            <p><strong>SPECIAL OFFER</strong></p>
+            <p>Cappuccino + Waffles</p>
+            <p class="price">Price: ₹250</p>
+            <button class="order-button">Order Now</button>
+        </div>
+    </div>
+    <section class="landing">
+        <h1>Welcome to Cup and Crumb</h1>
+        <p>Reserve your cozy spot now!</p>
+        <div class="form-container">
+            <h2>Reserve Your Spot</h2>
+            <form>
+                <label for="name">Full Name</label>
+                <input type="text" id="name" required>
+    
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+    
+                <label for="date">Date</label>
+                <input type="date" id="date" required>
+    
+                <label for="time">Time</label>
+                <input type="time" id="time" required>
+    
+                <label for="guests">Number of Guests</label>
+                <input type="number" id="guests" min="1" required>
+    
+                <button type="submit" class="book-btn">Confirm Booking</button>
+            </form>
+        </div>
+    </section>
+    
+    <footer class="custom-footer">
+        <div class="footer-container">
+            <div class="footer-box">
+                <h3>Contact Us</h3>
+                <p>Email: info@CupAndCrumb.com</p>
+                <p>Phone: +91 98765 43210</p>
+            </div>
+            <div class="footer-box">
+                <h3>Location</h3>
+                <p>Chennai, Tamil Nadu</p>
+                <p>Pincode: 600128</p>
+            </div>
+            <div class="footer-box">
+                <h3>More Info</h3>
+                <p><a href="#">About</a></p>
+                <p><a href="#">Privacy Policy</a></p>
+            </div>
+        </div>
+        <p class="footer-bottom">&copy; 2025 CupAndCrumb. All Rights Reserved.</p>
+    </footer>
+    
+</body>
+</html>

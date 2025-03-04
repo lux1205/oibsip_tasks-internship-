@@ -1,0 +1,113 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #121212;
+    text-align: center;
+    padding: 50px;
+    color: white;
+}
+
+.container {
+    background: #1e1e1e;
+    color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 20px rgba(255, 255, 255, 0.1);
+    max-width: 400px;
+    margin: auto;
+    transition: 0.3s;
+}
+
+h2 {
+    text-shadow: 0 0 10px cyan;
+}
+
+.circle {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    box-shadow: 0 0 15px rgba(0, 254, 186, 0.5);
+}
+
+.circle input {
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+}
+
+.circle span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.unit-switch {
+    margin: 20px 0;
+}
+
+select {
+    background: #292929;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    background: #00feba;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #5b548a;
+    color: white;
+}
+
+.result {
+    margin-top: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    text-shadow: 0 0 10px cyan;
+}
+.status {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-shadow: 0 0 5px cyan;
+}
+
+.status {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-shadow: 0 0 5px cyan;
+    transition: all 0.3s ease-in-out;
+}
+
+/* High Temperature */
+.status.high {
+    color: red;
+    text-shadow: 0 0 10px red;
+}
+
+/* Low Temperature */
+.status.low {
+    color: blue;
+    text-shadow: 0 0 10px blue;
+}
+
+/* Normal Temperature */
+.status.normal {
+    color: green;
+    text-shadow: 0 0 10px green;
+}
